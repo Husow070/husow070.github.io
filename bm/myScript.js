@@ -8,8 +8,16 @@ console.log(btn);
 function showPupUp(index){
   const pop = document.querySelectorAll(".modal-show");
   pop[index].classList.toggle("hide");
-};
+  console.log()
 
+  //op de klasses .vierkant, .wrapper, .bg Moet ook de blur classe getoggled worden.
+  const blurry = document.querySelectorAll(".vierkant, .wrapper, .bg");
+  blurry[0].classList.toggle("blur");
+  blurry[1].classList.toggle("blur");
+
+  document.getElementById("show-first").innerHTML = winkelTafels.discription();
+  console.log(winkelTafels)
+};
 
 let btns = 0;
 
@@ -20,14 +28,6 @@ while (btns < btn.length) {
   });
   btns++;
 };
-
-
-const bgBlurr = pop;
-
-function blurBg(params) {
-  document.querySelector(".modal-show").style.backgroundColor = "blurr";
-
-}
 
 // btn.addEventListener("click", showPupUp);
 
