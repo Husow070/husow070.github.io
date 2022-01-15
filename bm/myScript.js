@@ -11,8 +11,8 @@ function showPupUp(index){
 
   //op de klasses .vierkant, .wrapper, .bg Moet ook de blur classe getoggled worden.
   const blurry = document.querySelectorAll(".vierkant, .wrapper, .bg");
-  // blurry[0].classList.toggle("blur");
-  // blurry[1].classList.toggle("blur");
+  blurry[0].classList.toggle("blur");
+  blurry[1].classList.toggle("blur");
 
   const myModal = document.querySelector("#show-first");
   myModal.innerHTML = winkelTafels[0].discription;
