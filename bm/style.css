@@ -4,6 +4,10 @@
 .blur{
   filter:blur(8px);
 }
+
+.unblur{
+  filter:blur(0px);
+}
 .bg {
   /* The image used */
   background-image: url("img/background.jpg");

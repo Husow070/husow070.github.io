@@ -6,7 +6,6 @@ let pop = document.querySelectorAll(".modal-show");
 
 function showPupUp(index){
   pop[index].classList.toggle("hide");
-  console.log()
 
   //op de klasses .vierkant, .wrapper, .bg Moet ook de blur classe getoggled worden.
   const blurry = document.querySelectorAll(".vierkant, .wrapper, .bg");
@@ -17,9 +16,10 @@ function showPupUp(index){
   myModal.innerHTML = winkelTafels[0].discription;
 };
 
+
 let btns = 0;
 
-while (btns < btn.length) {
+while (btns< btn.length) {
   btn[btns].addEventListener("click", function(){
     const index = [].indexOf.call(btn, this);
     showPupUp(index);
@@ -27,12 +27,32 @@ while (btns < btn.length) {
   btns++;
 };
 
-function ClickOff (index){
+
+function ClickOff (){
   // const pop = document.querySelector(".modal-content");
   pop[0].classList.toggle("hide");
 }
 
-xclose.addEventListener("click", ClickOff)
+xclose.addEventListener("click" , closeScreen)
+
+function closeScreen() {
+  const blurry = document.querySelectorAll(".vierkant, .wrapper, .bg");
+  ClickOff();
+  blurry[0].classList.toggle("blur");
+  blurry[1].classList.toggle("blur");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // btn.addEventListener("click", showPupUp);
 
 // function closeWindow(){
