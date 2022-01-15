@@ -2,15 +2,17 @@ let modal = document.querySelectorAll(".myModal")
 let btn = document.querySelectorAll(".buttoncolor");
 let xclose = document.querySelector(".close");
 let pop = document.querySelectorAll(".modal-show");
+let btn1 = document.querySelectorAll(".buttoncolor1");
 
 
 function showPupUp(index){
   pop[index].classList.toggle("hide");
+  console.log(pop[index])
 
   //op de klasses .vierkant, .wrapper, .bg Moet ook de blur classe getoggled worden.
   const blurry = document.querySelectorAll(".vierkant, .wrapper, .bg");
-  blurry[0].classList.toggle("blur");
-  blurry[1].classList.toggle("blur");
+  // blurry[0].classList.toggle("blur");
+  // blurry[1].classList.toggle("blur");
 
   const myModal = document.querySelector("#show-first");
   myModal.innerHTML = winkelTafels[0].discription;
@@ -18,7 +20,6 @@ function showPupUp(index){
 
 
 let btns = 0;
-
 while (btns< btn.length) {
   btn[btns].addEventListener("click", function(){
     const index = [].indexOf.call(btn, this);
