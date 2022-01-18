@@ -2,7 +2,7 @@ let modal = document.querySelectorAll(".myModal")
 let btn = document.querySelectorAll(".buttoncolor");
 let xclose = document.querySelector(".close");
 let pop = document.querySelectorAll(".modal-show");
-let btn1 = document.querySelectorAll(".buttoncolor1");
+let btn1 = document.querySelector(".buttoncolor1");
 
 
 function showPupUp(index){
@@ -16,7 +16,9 @@ function showPupUp(index){
 
   const myModal = document.querySelector("#show-first");
   myModal.innerHTML = winkelTafels[0].discription;
+  myModal.innerHTML = winkelTafels[1].discription;
 };
+
 
 
 let btns = 0;
@@ -32,9 +34,10 @@ while (btns< btn.length) {
 function ClickOff (){
   // const pop = document.querySelector(".modal-content");
   pop[0].classList.toggle("hide");
+  pop[1].classList.toggle("hide");
 }
 
-xclose.addEventListener("click" , closeScreen)
+xclose.addEventListener('click', closeScreen);
 
 function closeScreen() {
   const blurry = document.querySelectorAll(".vierkant, .wrapper, .bg");
@@ -44,9 +47,10 @@ function closeScreen() {
 }
 
 
-
-
-
+function clickOn2(myList) {
+  console.log("clicked!")
+  pop[myList].classList.toggle("hide");
+}
 
 
 
